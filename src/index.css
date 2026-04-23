@@ -1,0 +1,128 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Soleto";
+    src: url("/fonts/Soleto.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Sagona Book";
+    src: url("/fonts/SagonaBook.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Edinwood Academy design system. All colors HSL.
+   Palette:
+   #58170d -> burgundy (primary)
+   #c5a153 -> gold (accent)
+   #ffffff -> white
+   #121b21 -> ink (foreground/dark)
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 205 28% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 205 28% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 205 28% 10%;
+
+    --primary: 8 73% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 50% 96%;
+    --secondary-foreground: 8 73% 20%;
+
+    --muted: 40 30% 95%;
+    --muted-foreground: 205 15% 35%;
+
+    --accent: 40 50% 55%;
+    --accent-foreground: 205 28% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 25% 88%;
+    --input: 40 25% 88%;
+    --ring: 8 73% 20%;
+
+    --ink: 205 28% 10%;
+    --gold: 40 50% 55%;
+    --gold-soft: 40 55% 92%;
+    --burgundy: 8 73% 20%;
+    --burgundy-deep: 8 73% 14%;
+
+    --radius: 1.25rem;
+
+    --shadow-soft: 0 10px 30px -12px hsl(var(--burgundy) / 0.18);
+    --shadow-card: 0 20px 50px -20px hsl(var(--ink) / 0.25);
+    --gradient-burgundy: linear-gradient(135deg, hsl(var(--burgundy)) 0%, hsl(var(--burgundy-deep)) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(40 60% 45%) 100%);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 205 28% 10%;
+    --foreground: 0 0% 100%;
+    --card: 205 28% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 205 28% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 40 50% 55%;
+    --primary-foreground: 205 28% 10%;
+    --secondary: 205 25% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 205 25% 18%;
+    --muted-foreground: 40 20% 75%;
+    --accent: 8 73% 30%;
+    --accent-foreground: 0 0% 100%;
+    --border: 205 25% 22%;
+    --input: 205 25% 22%;
+    --ring: 40 50% 55%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Sagona Book", serif;  
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, .font-display {
+    font-family: "Soleto", sans-serif;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .rounded-card {
+    @apply rounded-[1.75rem] p-8 md:p-24;
+    box-shadow: var(--shadow-card);
+  }
+  .container-x {
+    @apply mx-auto max-w-7xl md:max-w-[1500px] px-6 sm:px-20 md:px-24; 
+    }
+}
+
