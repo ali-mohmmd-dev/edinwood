@@ -28,13 +28,13 @@ const Footer = () => (
           <img src={logo} alt="Edinwood Logo" className="h-10 w-auto brightness-0 invert" />
         </Link>
         <p className="text-white/65 mt-4 max-w-sm leading-[1.3] mb-6">
-          A K–12 independent academy nurturing thoughtful, courageous learners since 1981.
+          A CBSE-affiliated, sports-integrated, value-driven institution shaping healthy, skilled, and confident lifelong learners.
         </p>
         
         <div className="space-y-3">
-          <p className="text-white/70 flex items-start gap-2"><MapPin className="h-4 w-4 mt-1 shrink-0" /> 14 Edinwood Ave, Boston, MA</p>
-          <p className="text-white/70 flex items-center gap-2"><Phone className="h-4 w-4" /> +1 (617) 555-0124</p>
-          <p className="text-white/70 flex items-center gap-2"><Mail className="h-4 w-4" /> admissions@edinwood.edu</p>
+          <p className="text-white/70 flex items-start gap-2"><MapPin className="h-4 w-4 mt-1 shrink-0" /> Thozhookkara, Thaneercode P.O.,<br/>Palakkad District, Kerala — 679536</p>
+          <p className="text-white/70 flex items-center gap-2"><Phone className="h-4 w-4" /> +91 9072 888 116 / +91 8943 442 226</p>
+          <p className="text-white/70 flex items-center gap-2"><Mail className="h-4 w-4" /> admin@edinwood.com</p>
         </div>
       </div>
       

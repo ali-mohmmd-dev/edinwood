@@ -33,10 +33,10 @@ const leaders = [
 ];
 
 const timeline = [
-  { year: "1981", title: "Foundation", desc: "Edinwood Academy is established with just 50 students." },
-  { year: "1995", title: "Campus Expansion", desc: "Opening of the new Science & Arts block." },
-  { year: "2010", title: "Global Recognition", desc: "Awarded top accolades for holistic education." },
-  { year: "2024", title: "Modern Era", desc: "Launch of our new Innovation & Tech Hub." },
+  { year: "2023", title: "The Vision", desc: "Passionate educators set out to build a modern, inquiry-led academy." },
+  { year: "2024", title: "Groundbreaking", desc: "Construction begins on our state-of-the-art campus." },
+  { year: "2025", title: "Assembling the Team", desc: "Recruiting world-class faculty from around the globe." },
+  { year: "2026", title: "Doors Open", desc: "Edinwood Academy welcomes its founding class of students." },
 ];
 
 const AboutPage = () => {
@@ -63,21 +63,21 @@ const AboutPage = () => {
               <Globe2 className="h-12 w-12 text-gold mx-auto mb-6" />
               <h3 className="font-display text-2xl text-burgundy mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-[1.6]">
-                To provide an inquiry-led education that deeply engages students, honors their unique potential, and inspires them to pursue lifelong learning.
+                To provide an engaging and dynamic learning environment where academics, sports, and values work together to develop confident, compassionate, and capable leaders.
               </p>
             </div>
             <div className="bg-white rounded-[1.75rem] p-10 shadow-sm border border-border/50 text-center hover:-translate-y-2 transition-transform duration-300">
               <Target className="h-12 w-12 text-gold mx-auto mb-6" />
               <h3 className="font-display text-2xl text-burgundy mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-[1.6]">
-                To cultivate courageous, thoughtful leaders capable of navigating and shaping an ever-changing world with empathy and innovation.
+                To shape healthy, skilled, and confident lifelong learners ready to lead and succeed in an ever-changing world.
               </p>
             </div>
             <div className="bg-burgundy text-white rounded-[1.75rem] p-10 shadow-card text-center hover:-translate-y-2 transition-transform duration-300">
               <Heart className="h-12 w-12 text-gold mx-auto mb-6" />
               <h3 className="font-display text-2xl mb-4">Our Values</h3>
               <p className="text-white/80 leading-[1.6]">
-                Integrity, Curiosity, Compassion, and Resilience form the cornerstone of everything we do at Edinwood.
+                Integrity, empathy, responsibility, and purposeful action form the cornerstone of everything we do at Edinwood.
               </p>
             </div>
           </div>
@@ -89,14 +89,14 @@ const AboutPage = () => {
         <div className="container-x">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-gold">Our History</span>
-              <h2 className="font-display text-3xl md:text-5xl text-burgundy mt-3 mb-6">A Journey of Excellence</h2>
+              <span className="text-xs font-semibold tracking-[0.2em] uppercase text-gold">Our Foundation</span>
+              <h2 className="font-display text-3xl md:text-5xl text-burgundy mt-3 mb-6">The Founding Vision</h2>
               <div className="space-y-4 text-muted-foreground leading-[1.7]">
                 <p>
-                  Since our doors first opened in 1981, Edinwood Academy has been driven by a singular purpose: to redefine education by putting the child at the center of the learning experience.
+                  Edinwood Academy was born from a singular, powerful vision: to build a school for the future, right from the ground up. We saw the need for an education that goes beyond rote learning and puts the child at the absolute center of the experience.
                 </p>
                 <p>
-                  What started as a modest campus has blossomed into a thriving community. Throughout the decades, we have embraced innovation while staying true to our foundational belief that education is about building character, not just delivering curriculum.
+                  As we open our doors for our inaugural year, we are not bound by outdated traditions. Instead, we have the unique opportunity to implement the very best modern educational practices in a custom-built, state-of-the-art environment.
                 </p>
               </div>
             </div>
@@ -124,25 +124,25 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* 3. Our Culture & Approach */}
+      {/* 3. Quality & Discipline Philosophy */}
       <section className="py-16 md:py-24 bg-burgundy text-white">
         <div className="container-x text-center">
-          <h2 className="font-display text-3xl md:text-5xl mb-12">Our Culture & Approach</h2>
+          <h2 className="font-display text-3xl md:text-5xl mb-12">Quality & Discipline Philosophy</h2>
           <div className="grid md:grid-cols-3 gap-8 text-left">
             <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
-              <Lightbulb className="h-10 w-10 text-gold mb-6" />
-              <h4 className="font-display text-2xl mb-3">Inquiry-Based Learning</h4>
-              <p className="text-white/70 leading-[1.6]">We encourage students to ask questions, explore deeply, and connect their learning to real-world scenarios.</p>
+              <Heart className="h-10 w-10 text-gold mb-6" />
+              <h4 className="font-display text-2xl mb-3">Restorative Discipline</h4>
+              <p className="text-white/70 leading-[1.6]">Discipline is restorative and educative—fostering responsibility and self-awareness. Fear-based or punitive practices have no place here.</p>
             </div>
             <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
-              <Users className="h-10 w-10 text-gold mb-6" />
-              <h4 className="font-display text-2xl mb-3">Inclusive Community</h4>
-              <p className="text-white/70 leading-[1.6]">Every student is seen, heard, and valued. We celebrate diversity and foster a deeply supportive environment.</p>
+              <Target className="h-10 w-10 text-gold mb-6" />
+              <h4 className="font-display text-2xl mb-3">Continuous Assessment</h4>
+              <p className="text-white/70 leading-[1.6]">Assessment is continuous and supportive, guiding progress rather than comparison. We emphasize understanding, application, and expression.</p>
             </div>
             <div className="p-8 rounded-2xl bg-white/5 border border-white/10">
-              <BookOpen className="h-10 w-10 text-gold mb-6" />
-              <h4 className="font-display text-2xl mb-3">Holistic Development</h4>
-              <p className="text-white/70 leading-[1.6]">Beyond academics, we prioritize emotional intelligence, physical well-being, and ethical leadership.</p>
+              <Globe2 className="h-10 w-10 text-gold mb-6" />
+              <h4 className="font-display text-2xl mb-3">SDG Integration</h4>
+              <p className="text-white/70 leading-[1.6]">Sustainable Development Goals (SDGs) are integrated into everyday learning through discussions, projects, and clubs to prepare purposeful citizens.</p>
             </div>
           </div>
         </div>
@@ -203,8 +203,8 @@ const AboutPage = () => {
         <div className="container-x">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-6xl font-display text-gold mb-2">40+</div>
-              <div className="text-burgundy font-semibold">Years of Excellence</div>
+              <div className="text-4xl md:text-6xl font-display text-gold mb-2">15+</div>
+              <div className="text-burgundy font-semibold">Acres of Green Campus</div>
             </div>
             <div>
               <div className="text-4xl md:text-6xl font-display text-gold mb-2">15:1</div>
@@ -212,11 +212,11 @@ const AboutPage = () => {
             </div>
             <div>
               <div className="text-4xl md:text-6xl font-display text-gold mb-2">100%</div>
-              <div className="text-burgundy font-semibold">University Acceptance</div>
+              <div className="text-burgundy font-semibold">Future-Ready Curriculum</div>
             </div>
             <div>
-              <div className="text-4xl md:text-6xl font-display text-gold mb-2">50+</div>
-              <div className="text-burgundy font-semibold">Extracurricular Clubs</div>
+              <div className="text-4xl md:text-6xl font-display text-gold mb-2">30+</div>
+              <div className="text-burgundy font-semibold">Global Expert Faculty</div>
             </div>
           </div>
         </div>
@@ -227,7 +227,7 @@ const AboutPage = () => {
         <span className="text-xs font-semibold tracking-[0.2em] uppercase text-gold">A True Partnership</span>
         <h2 className="font-display text-3xl md:text-5xl text-burgundy mt-3 mb-6">Community & Parents</h2>
         <p className="text-lg text-muted-foreground leading-[1.7]">
-          At Edinwood, we firmly believe that education is a collaborative effort. Our vibrant Parent-Teacher Association and active alumni network ensure that the school remains deeply connected to its community. We host regular workshops, coffee mornings, and collaborative events to keep parents actively engaged in their child's educational journey.
+          At Edinwood, we firmly believe that education is a collaborative effort. As a founding family, you play a crucial role in shaping our community. Our Parent-Teacher Association ensures that the school remains deeply connected to its community from day one. We host regular workshops, coffee mornings, and collaborative events to keep parents actively engaged in their child's educational journey.
         </p>
       </section>
 

@@ -21,11 +21,10 @@ const Hero = () => {
             <Sparkles className="h-3.5 w-3.5 text-gold" /> Admissions open · 2026
           </span>
           <h1 className="font-display mt-6 text-[50px] md:text-6xl lg:text-7xl font-semibold leading-[1.05]">
-            Where curiosity <span className="text-gold italic">becomes</span> excellence.
+            <span className="text-gold italic">Play.</span> Grow. Lead.
           </h1>
           <p className="mt-6 text-base md:text-lg text-white/85 max-w-xl leading-[1.3]">
-            At Edinwood Academy we shape thoughtful, courageous learners through rigorous academics,
-            creative expression, and a community that genuinely cares.
+            At Edinwood, education stands on three interconnected pillars: Mind, Body, and Values. We shape healthy, skilled, and confident lifelong learners ready to lead and succeed.
           </p>
           <div className="mt-[40px] flex flex-wrap gap-3">
             <Button asChild size="lg" className="bg-gold hover:bg-gold/90 text-ink rounded-full px-7 h-12 font-semibold">
