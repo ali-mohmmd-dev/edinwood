@@ -1,10 +1,12 @@
+"use client";
+
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback } from "react";
-import g1 from "@/assets/GALLERY-1.png";
-import g2 from "@/assets/GALLERY-2.png";
-import g3 from "@/assets/gallery-3.png";
+import g1 from "@/assets/gallery-1.jpg";
+import g2 from "@/assets/gallery-2.jpg";
+import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/ground.png";
 
 const slides = [
@@ -28,24 +30,17 @@ const Gallery = () => {
         </div>
 
         <div className="relative">
-          <div className=" rounded-[1.75rem]" ref={ref}>
+          <div className=" " ref={ref}>
             <div className="flex">
               {slides.map((s, i) => (
-                <div key={i} className="flex-[0_0_100%] min-w-0 mx-2">
-                  <div className="relative aspect-[12/9] md:aspect-[19/9] rounded-[1.75rem] overflow-hidden">
-                    <img src={s.img} alt={s.title} loading="lazy" width={1400} height={900} className="h-full w-full object-cover" />
+                <div key={i} className="flex-[0_0_100%] min-w-0 mx-1">
+                  <div className="relative aspect-[12/9] md:aspect-[19/9]  overflow-hidden">
+                    <img src={s.img.src} alt={s.title} loading="lazy" width={1400} height={900} className="h-full w-full object-cover" />
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* <button onClick={prev} aria-label="Previous" className="absolute left-4 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-white/90 text-burgundy hover:bg-white shadow-soft">
-            <ChevronLeft className="h-5 w-5" />
-          </button>
-          <button onClick={next} aria-label="Next" className="absolute right-4 top-1/2 -translate-y-1/2 grid place-items-center h-12 w-12 rounded-full bg-white/90 text-burgundy hover:bg-white shadow-soft">
-            <ChevronRight className="h-5 w-5" />
-          </button> */}
         </div>
       </div>
     </section>

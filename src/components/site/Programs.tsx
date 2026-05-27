@@ -1,85 +1,76 @@
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-import { ArrowRight } from "lucide-react";
-import imgK from "@/assets/kindergarten.jpg";
-import imgP from "@/assets/primary.png";
-import imgM from "@/assets/middle.png";
-import imgS from "@/assets/senior.png";
+"use client";
 
-const programs = [
-  {
-    title: "Kindergarten",
-    age: "Ages 3-5",
-    desc: "A nurturing environment where curiosity blooms and foundational skills take root through play and discovery.",
-    img: imgK,
-  },
-  {
-    title: "Primary School",
-    age: "Grades 1-5",
-    desc: "Building confidence and critical thinking in a collaborative setting that celebrates every student's unique potential.",
-    img: imgP,
-  },
-  {
-    title: "Middle School",
-    age: "Grades 6-8",
-    desc: "Guiding young adults through transition with rigorous academics and a focus on character and independence.",
-    img: imgM,
-  },
-  {
-    title: "Senior School",
-    age: "Grades 9-12",
-    desc: "Advanced preparation for university and life, cultivating leadership, resilience, and intellectual passion.",
-    img: imgS,
-  },
-];
+import { ArrowRight } from "lucide-react";
+import imgP from "@/assets/primary.png";
 
 const Programs = () => {
-  const [ref] = useEmblaCarousel({ loop: false, align: "start" }, [Autoplay({ delay: 2000 })]);
-
   return (
-    <section id="programs" className="py-16 md:py-28 bg-secondary overflow-hidden">
+    <section 
+      id="programs" 
+      className="py-16 md:py-24 bg-white overflow-visible relative z-20"
+    >
       <div className="container-x">
-        <div className="mb-16 md:mb-[60px]  max-w-3xl ">
-          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-gold">Our Academic Journey</span>
-          <h2 className="font-display text-3xl md:text-5xl text-burgundy mt-3">Discover our programs</h2>
-          <p className="text-muted-foreground leading-[1.6] mt-4">
-            From the first days of kindergarten to the final steps across the graduation stage,
-            we provide a continuous, carefully crafted educational experience.
-          </p>
+        
+        {/* Header Block Element */}
+        <div className="mb-12 md:mb-16 max-w-3xl">
+          <span className="text-xs font-semibold tracking-[0.2em] uppercase text-gold">
+            Our Academic Journey
+          </span>
+          <h2 className="font-display text-3xl md:text-5xl text-burgundy mt-3">
+            Discover our programs
+          </h2>
         </div>
 
-        <div className="cursor-grab active:cursor-grabbing" ref={ref}>
-          <div className="flex -ml-4 md:-ml-6">
-            {programs.map((prog, i) => (
-              <div key={i} className="flex-[0_0_85%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] min-w-0 pl-4 md:pl-6">
-                <article className="group relative rounded-[1.75rem] overflow-hidden aspect-[4/5] sm:aspect-square lg:aspect-[3/4]">
-                  <img
-                    src={prog.img}
-                    alt={prog.title}
-                    loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-burgundy-deep via-burgundy-deep/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-95" />
+        {/* 3-Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch lg:min-h-[500px]">
+          {/* Column 1: Foundation */}
+          <div className="bg-secondary p-8 md:p-12 flex flex-col justify-center border border-border/50 shadow-sm hover:shadow-md transition-all">
+            <span className="text-gold font-semibold text-xs md:text-sm mb-2 block uppercase tracking-[0.2em]">
+              Grades PRE KG - GRADE 2 
+            </span>
+            <h3 className="font-display text-2xl sm:text-3xl md:text-3xl lg:text-4xl mb-4 text-black leading-tight">
+              Foundation
+            </h3>
+            <p className="text-muted-foreground leading-[1.6] text-sm md:text-base lg:text-lg mb-8">
+              A nurturing environment where curiosity blooms and foundational skills take root through play and discovery.
+            </p>
+            <div className="mt-auto">
+              <button className="inline-flex items-center gap-2 text-sm md:text-base font-semibold text-gold group hover:text-burgundy transition-colors">
+                Learn More{" "}
+                <ArrowRight className="h-4 w-4 md:h-5 md:w-5 transition-transform duration-300 group-hover:translate-x-2" />
+              </button>
+            </div>
+          </div>
 
-                  <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
-                    <span className="text-gold font-semibold text-sm mb-2 opacity-0  group-hover:opacity-100  transition-all duration-300">
-                      {prog.age}
-                    </span>
-                    <h3 className="font-display text-2xl md:text-3xl mb-3 transform transition-transform duration-300 group-hover:-translate-y-2">
-                      {prog.title}
-                    </h3>
-                    <p className="text-white/80 leading-[1.5] text-sm md:text-base opacity-0 h-0 overflow-hidden group-hover:opacity-100 group-hover:h-auto transition-all duration-300">
-                      {prog.desc}
-                    </p>
-                    <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-gold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
-                      Learn More <ArrowRight className="h-4 w-4" />
-                    </div>
-                  </div>
-                </article>
-              </div>
-            ))}
+          {/* Column 2: Image */}
+          <div className="overflow-hidden shadow-sm border border-border/50 relative min-h-[300px] lg:min-h-full group">
+            <img
+              src={imgP.src}
+              alt="Our Academic Journey"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </div>
+
+          {/* Column 3: Preparatory */}
+          <div className="bg-secondary p-8 md:p-12 flex flex-col justify-center border border-border/50 shadow-sm hover:shadow-md transition-all">
+            <span className="text-gold font-semibold text-xs md:text-sm mb-2 block uppercase tracking-[0.2em]">
+              Grades 3-6
+            </span>
+            <h3 className="font-display text-2xl sm:text-3xl md:text-3xl lg:text-4xl mb-4 text-black leading-tight">
+              Preparatory
+            </h3>
+            <p className="text-muted-foreground leading-[1.6] text-sm md:text-base lg:text-lg mb-8">
+              Building confidence and critical thinking in a collaborative setting that celebrates every student's unique potential.
+            </p>
+            <div className="mt-auto">
+              <button className="inline-flex items-center gap-2 text-sm md:text-base font-semibold text-gold group hover:text-burgundy transition-colors">
+                Learn More{" "}
+                <ArrowRight className="h-4 w-4 md:h-5 md:w-5 transition-transform duration-300 group-hover:translate-x-2" />
+              </button>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );

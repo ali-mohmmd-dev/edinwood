@@ -7,27 +7,51 @@ const newsItems = [
   {
     id: 1,
     img: n1,
-    category: "Academics",
-    date: "October 15, 2026",
-    title: "Edinwood Students Win National Science Fair",
-    excerpt: "Our senior science team took first place at the annual National Innovation Symposium with their project on renewable energy.",
+    category: "Milestones",
+    date: "October 10, 2025",
+    title: "Edinwood Foundation",
+    excerpt: "The first stone was laid. On October 10, 2025, Edinwood International School marked the beginning of something significant — a foundation ceremony that turned vision into ground reality.",
   },
   {
     id: 2,
     img: n2,
-    category: "Campus Life",
-    date: "October 10, 2026",
-    title: "Annual Fall Festival Brings Community Together",
-    excerpt: "Students, parents, and alumni gathered this weekend for our traditional Fall Festival, featuring student performances and local food.",
+    category: "Community",
+    date: "November 16, 2025",
+    title: "Lunch with Edinwood",
+    excerpt: "Families came, conversations flowed. Our community lunch brought together parents and well-wishers for an open, honest introduction to the Edinwood vision — what we believe, how we teach, and why it matters.",
   },
   {
     id: 3,
     img: n3,
-    category: "Arts",
-    date: "October 5, 2026",
-    title: "Winter Theater Production Announced",
-    excerpt: "The Drama department has announced this year's winter production will be a modern adaptation of Shakespeare's A Midsummer Night's Dream.",
+    category: "Campus Life",
+    date: "November 18, 2025",
+    title: "Edinwood Colors",
+    excerpt: "Little hands, big imaginations. Edinwood Colors brought children together for a vibrant coloring competition — a celebration of creativity, expression, and the joy of early learning.",
   },
+  // {
+  //   id: 4,
+  //   img: n1,
+  //   category: "Leadership",
+  //   date: "November 25, 2025",
+  //   title: "DIDAC Conference",
+  //   excerpt: "Edinwood's leadership attended Asia's largest education exhibition — DIDAC India 2025 in New Delhi — where 22,000+ educators and 300+ edtech innovators converged to shape the future of learning. Insights from the conference continue to inform how we build Edinwood's curriculum and infrastructure.",
+  // },
+  // {
+  //   id: 5,
+  //   img: n2,
+  //   category: "Infrastructure",
+  //   date: "April 16, 2026",
+  //   title: "Edinwood Signature Field Kick-Off",
+  //   excerpt: "The whistle blew. Edinwood's Edinwood Signature Field FIFA-affiliated full-sized football ground officially opened — a professional-grade facility and home to the Juventus Football Academy Kerala training programme.",
+  // },
+  // {
+  //   id: 6,
+  //   img: n3,
+  //   category: "Faculty",
+  //   date: "May 10, 2026",
+  //   title: "Edinwood Educators Meet",
+  //   excerpt: "Before the first bell rings, our educators gathered. The Edinwood Educators Meet brought our teaching team together to align on pedagogy, values, and the shared vision that will shape every classroom from day one.",
+  // },
 ];
 
 const News = () => {
@@ -44,12 +68,12 @@ const News = () => {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-[30px] md:gap-[40px]">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-5 md:gap-y-20">
           {newsItems.map((item) => (
             <article key={item.id} className="group cursor-pointer flex flex-col">
-              <div className="relative aspect-[4/3] rounded-[1.75rem] overflow-hidden mb-6">
+              <div className="relative aspect-[4/3] overflow-hidden mb-6">
                 <img 
-                  src={item.img} 
+                  src={item.img.src} 
                   alt={item.title} 
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" 
